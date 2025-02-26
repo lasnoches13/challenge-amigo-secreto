@@ -4,8 +4,12 @@ let listaAmigos = [];
 //função para botão adicionar amigo
 function adicionarAmigo(){
 let nomeAmigo = document.querySelector('input').value;
-if (nomeAmigo == ''){
-    alert('Por favor, insira um nome.')
+if (nomeAmigo == ''){ // caso nome seja vazio, mostrar alert.
+    alert('Por favor, insira um nome.');
+    limparInput();
+}else if(listaAmigos.includes(nomeAmigo)){ //caso a lista ja contenha um nome informado, mostra outro alert
+    alert('Nome ja existente, por favor insira um nome diferente.');
+    limparInput();
 }else{
 listaAmigos.push(nomeAmigo);
 console.log(listaAmigos);
