@@ -17,18 +17,18 @@ function mostrarAmigo(){
     let campo = document.querySelector('ul');
         campo.innerHTML = listaAmigos;
     }
-
 //função limpar input
 function limparInput(){
-    chute = document.querySelector('input');
-    chute.value = '';
+    nomeAmigo = document.querySelector('input');
+    nomeAmigo.value = '';
 }
 //função sortear amigo
 function sortearAmigo(){
 let amigoSorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
 alert(`O seu amigo secreto é: ${amigoSorteado}`);
-listaAmigos =[];
 limparInput();
+listaAmigos = [];
+mostrarAmigo();
 return amigoSorteado;
 }
 
